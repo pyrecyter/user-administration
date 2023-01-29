@@ -63,6 +63,7 @@ const Home = () => {
     {
       title: "Email",
       dataIndex: "email",
+      render: (val) => <a href={"mailto:" + val}>{val}</a>,
       sorter: {
         compare: (a, b) => a.email.localeCompare(b.email),
       },
